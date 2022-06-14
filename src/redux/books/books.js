@@ -23,7 +23,7 @@ const books = createSlice({
     },
     removeBook(state, action) {
       // eslint-disable-next-line no-param-reassign
-      state.books = state.books.filter((book) => book.id !== action.payload.id);
+      state.books = state.books.filter((book) => book.id !== action.payload);
     },
   },
 });
