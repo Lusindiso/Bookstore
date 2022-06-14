@@ -5,7 +5,7 @@ const Categories = () => {
   const dispatch = useDispatch();
 
   const clickHandler = () => {
-    dispatch(categoriesActions.checkStatus);
+    dispatch(categoriesActions.checkStatus());
   };
   return (
     <main>
