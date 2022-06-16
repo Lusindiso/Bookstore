@@ -22,6 +22,7 @@ const Books = () => {
         id={key}
         author={books[key][0].author}
         title={books[key][0].title}
+        category={books[key][0].category}
       />,
     );
   }

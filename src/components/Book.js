@@ -4,7 +4,9 @@ import { booksActions } from '../redux/books/books';
 import { deleteBookData } from '../redux/books/booksActions';
 import classes from './Book.module.css';
 
-const Book = ({ id, title, author }) => {
+const Book = ({
+  id, title, author, category,
+}) => {
   const dispatch = useDispatch();
 
   const removeBookHandler = (e) => {
@@ -13,6 +15,7 @@ const Book = ({ id, title, author }) => {
   };
   return (
     <div className={classes.book}>
+      <div className={classes.category}>{category}</div>
       <h3 className="title">{title}</h3>
       <div className="author">{author}</div>
       <div className={classes.buttons}>
@@ -30,6 +33,7 @@ Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
