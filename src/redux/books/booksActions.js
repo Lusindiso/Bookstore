@@ -40,3 +40,19 @@ export const sendBooksData = (book) => async () => {
 		throw new Error("error");
 	}
 };
+
+export const deleteBookData = (id) => async () => {
+	const deleteData = async () => {
+		await fetch(
+			`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/5ZyxeaNJQ7Ur6KUQjhUz/books/${id}`,
+			{
+				method: "DELETE",
+			}
+		);
+	};
+	try {
+		await deleteData();
+	} catch (error) {
+		throw new Error("error");
+	}
+};
