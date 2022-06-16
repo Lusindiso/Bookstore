@@ -1,31 +1,22 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  books: [
-    {
-      id: '255459688',
-      author: 'Frank Herbit',
-      title: 'Dune',
-    },
-    {
-      id: '20322515231530',
-      author: 'Suzanne Collins',
-      title: 'Capital in the Twenty-First Century',
-    },
-  ],
+	books: {},
 };
 const books = createSlice({
-  name: 'book',
-  initialState,
-  reducers: {
-    addBook(state, action) {
-      state.books.push(action.payload);
-    },
-    removeBook(state, action) {
-      // eslint-disable-next-line no-param-reassign
-      state.books = state.books.filter((book) => book.id !== action.payload);
-    },
-  },
+	name: "book",
+	initialState,
+	reducers: {
+		replaceBook(state, action) {
+			state.books = { ...action.payload };
+		},
+		addBook(state, action) {
+			state.books = { ...state.books, ...action.payload };
+		},
+		removeBook(state, action) {
+			delete state.books[action.payload];
+		},
+	},
 });
 
 export const booksActions = books.actions;
