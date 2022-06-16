@@ -1,37 +1,37 @@
 .addbook {
-	border-top: 1px solid #e8e8e8;
-	padding-top: 15px;
-	margin-top: 20px;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 15px;
+  margin-top: 20px;
 }
 
 .addbook form {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .addbook input {
-	border: 1px solid #e8e8e8;
-	padding: 10px;
-	width: 27%;
-	margin-top: 10px;
-	border-radius: 5px;
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+  width: 27%;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
 .addbook button {
-	padding: 8px 20px;
-	border: none;
-	color: white;
-	border-radius: 5px;
-	background: #0290ff;
-	font-size: 1.2rem;
+  padding: 8px 20px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  background: #0290ff;
+  font-size: 1.2rem;
 }
 
 .select {
-	border: 1px solid #e8e8e8;
-	padding: 10px;
-	width: 15%;
-	margin-top: 10px;
-	border-radius: 5px;
-	background: white;
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+  width: 15%;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: white;
 }
