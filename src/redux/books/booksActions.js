@@ -15,3 +15,28 @@ export const fetchBooksData = () => async (dispatch) => {
 		throw new Error("error");
 	}
 };
+
+export const sendBooksData = (book) => async () => {
+	const sendData = async () => {
+		await fetch(
+			"https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/5ZyxeaNJQ7Ur6KUQjhUz/books",
+			{
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					item_id: book.id,
+					title: book.title,
+					author: book.author,
+					category: book.category,
+				}),
+			}
+		);
+	};
+	try {
+		await sendData();
+	} catch (error) {
+		throw new Error("error");
+	}
+};
